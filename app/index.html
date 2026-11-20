@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Leonida Field Guide — GTA VI Trophy Guide and Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">
+    <h1>The Leonida Field Guide</h1>
+    <p class="sub">GTA VI trophy guide &amp; tracker · all 55 trophies · every claim cited</p>
+  </div>
+  <div class="headstats">
+    <div class="big" id="earned-count">12 of 55 earned</div>
+    <div class="grades" id="grade-counts"></div>
+    <div class="headbtns">
+      <label class="switch">Spoiler mode <input type="checkbox" id="spoiler" checked></label>
+      <button id="export" type="button">Export</button>
+      <label class="import">Import <input id="import" type="file" accept="application/json" hidden></label>
+      <button id="reset" type="button">Reset</button>
+    </div>
+  </div>
+</header>
+<div id="audit" class="audit" aria-label="Computed audit"></div>
+<nav id="tabs">
+  <button data-view="tracker" class="tab active" type="button">Tracker</button>
+  <button data-view="roadmap" class="tab" type="button">Roadmap</button>
+  <button data-view="missables" class="tab" type="button">Missables</button>
+  <button data-view="sources" class="tab" type="button">Sources</button>
+  <button data-view="nextup" class="tab" type="button">Next up</button>
+</nav>
+<main>
+  <section id="view-tracker" class="view">
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search trophies…">
+      <label>Kind <select id="f-kind"><option value="all">All</option></select></label>
+      <label>Grade <select id="f-grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
+      <label>Status <select id="f-status"><option value="all">All</option><option value="open">Not earned</option><option value="done">Earned</option></select></label>
+      <label>Sort <select id="f-sort"><option value="roadmap">Roadmap order</option><option value="name">Name</option><option value="difficulty">Difficulty</option></select></label>
+      <label class="switch"><input type="checkbox" id="hide-earned"> Hide earned</label>
+    </div>
+    <div class="tracker-grid">
+      <div id="checklist" class="checklist"></div>
+      <article id="guide" class="guide"></article>
+      <aside id="rail" class="rail"></aside>
+    </div>
+  </section>
+  <section id="view-roadmap" class="view hidden"></section>
+  <section id="view-missables" class="view hidden"></section>
+  <section id="view-sources" class="view hidden"></section>
+  <section id="view-nextup" class="view hidden"></section>
+</main>
+<footer>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games. Trophy names and descriptions are the official list; all guide text is our own work. Works fully offline.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
